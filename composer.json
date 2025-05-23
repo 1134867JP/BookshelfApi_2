@@ -1,0 +1,19 @@
+{
+  "name": "atitus/bookshelf-api",
+  "description": "API RESTful de gerenciamento de livros usando Slim Framework e Arquitetura Hexagonal",
+  "require": {
+    "php": ">=8.0",
+    "slim/slim": "^4.11",
+    "slim/psr7": "^1.6",
+    "vlucas/phpdotenv": "^5.5",
+    "php-di/php-di": "^6.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Domain\\": "src/Domain/",
+      "Application\\": "src/Application/",
+      "Infrastructure\\": "src/Infrastructure/",
+      "Interfaces\\": "src/Interfaces/"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+services:
+  app:
+    build: .
+    container_name: bookshelf_app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    env_file:
+      - .env
+    command: php -S 0.0.0.0:8081 -t public
+  db:
+    image: mysql:8.0
+    container_name: bookshelf_db
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  db_data:

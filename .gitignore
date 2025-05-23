@@ -1,0 +1,26 @@
+# Composer
+/vendor/
+/composer.lock
+
+# PHPStorm
+.idea/
+
+# VSCode
+.vscode/
+
+# Ambiente
+.env
+.env.*
+
+# Docker
+/db_data/
+
+# Logs
+*.log
+
+# Cache
+/cache/
+
+# Outros
+.DS_Store
+Thumbs.db
