@@ -7,27 +7,24 @@
 
 ## Índice
 
-* [Descrição](#descrição)
+* [Descrição](#descricao)
 * [Arquitetura](#arquitetura)
 * [Tecnologias](#tecnologias)
-* [Pré‑requisitos](#pré‑requisitos)
+* [Pré‑requisitos](#pre-requisitos)
 * [Instalação](#instalação)
 * [Como Rodar](#como-rodar)
 * [Endpoints](#endpoints)
 * [Estrutura de Diretórios](#estrutura-de-diretórios)
-* [Contribuição](#contribuição)
-* [Licença](#licença)
 
 ---
 
-## Descrição
+<h2 id="descricao">Descrição</h2>
 
 **BookshelfApi\_2** é uma API RESTful para gerenciar um catálogo de livros.
 Implementada em PHP com [Slim Framework 4](https://www.slimframework.com/), organizada segundo os princípios da **Arquitetura Hexagonal** (Ports & Adapters) e conteinerizada com Docker Compose.
 
 ---
-
-## Arquitetura
+<h2 id="arquitetura">Arquitetura</h2>
 
 * **Domain**: Entidades e Portas (interfaces de repositório).
 * **Application**: Casos de uso (regras de negócio).
@@ -38,7 +35,7 @@ A app carrega variáveis de ambiente via `vlucas/phpdotenv` e injeta dependênci
 
 ---
 
-## Tecnologias
+<h2 id="tecnologias">Tecnologias</h2>
 
 * PHP 8.1‑CLI
 * [Slim Framework 4](https://www.slimframework.com/)
@@ -48,15 +45,14 @@ A app carrega variáveis de ambiente via `vlucas/phpdotenv` e injeta dependênci
 * [php-di/php-di](https://github.com/PHP-DI/PHP-DI)
 
 ---
-
-## Pré‑requisitos
+<h2 id="pre-requisitos">Pré‑requisitos</h2>
 
 * [Docker](https://www.docker.com/) (>= 20.x)
 * [Docker Compose](https://docs.docker.com/compose/) (>= 2.x)
 
 ---
 
-## Instalação
+<h2 id="instalacao">Instalação</h2>
 
 1. **Clone o repositório**
 
@@ -83,7 +79,7 @@ A app carrega variáveis de ambiente via `vlucas/phpdotenv` e injeta dependênci
 
 ---
 
-## Como Rodar
+<h2 id="como-rodar">Como Rodar</h2>
 
 Execute na raiz do projeto:
 
@@ -101,20 +97,17 @@ docker compose up --build -d
 * Para ver logs em tempo real:
 
   ```bash
+  docker compose logs -f app
   ```
 
-docker compose logs -f app
-
-````
-
-- Para parar tudo:  
-  ```bash
-docker compose down
-````
+* Para parar tudo:  
+   ```bash
+   docker compose down
+   ````
 
 ---
 
-## Endpoints
+<h2 id="endpoints">Endpoints</h2>
 
 |   Método | Rota          | Descrição                                   |
 | -------: | ------------- | ------------------------------------------- |
@@ -124,7 +117,7 @@ docker compose down
 |    `PUT` | `/books/{id}` | Atualiza dados de um livro existente (JSON) |
 | `DELETE` | `/books/{id}` | Remove um livro                             |
 
-### Exemplo de Payload (JSON)
+### Exemplo Payload
 
 ```json
 {
@@ -156,7 +149,7 @@ curl -X DELETE http://localhost:8081/books/1
 
 ---
 
-## Estrutura de Diretórios
+<h2 id="estrutura-de-diretórios">Estrutura de Diretórios</h2>
 
 ```
 .
