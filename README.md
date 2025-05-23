@@ -78,6 +78,7 @@ A app carrega variáveis de ambiente via `vlucas/phpdotenv` e injeta dependênci
    DB_NAME=bookshelf
    DB_USER=shelfuser
    DB_PASS=shelfpass
+   MYSQL_ROOT_PASSWORD=rootpass
    ```
 
 ---
