@@ -133,6 +133,9 @@ docker compose up --build -d
 # Listar
 curl http://localhost:8081/books
 
+# Listar Específico
+curl http://localhost:8081/books/1
+
 # Criar
 curl -X POST http://localhost:8081/books \
      -H "Content-Type: application/json" \
